@@ -20,7 +20,7 @@ exports.listTransactions = async (req, res) => {
     const endDate = new Date(startDate);
     endDate.setMonth(endDate.getMonth() + 1);
 
-    const regex = new RegExp(search, 'i');  // Case-insensitive search
+    const regex = new RegExp(search, 'i'); 
 
     try {
         const transactions = await Transaction.find({
